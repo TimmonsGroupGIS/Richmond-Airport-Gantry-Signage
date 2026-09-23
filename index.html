@@ -313,7 +313,7 @@
         <div id="viewer">
             <div id="viewer-title">
                 <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFph8QV3f9NJg/company-logo_200_200/B4EZdp0GrqHsA0-/0/1749826956321/timmons_group_logo?e=2147483647&v=beta&t=DartXpUkAR5eb0QHyBDlpKO_yX4vzaD3DIkHRLNzrMM" alt="Timmons Group">
-                <span>Morrisville, NC Pavement/Asset Data Collector</span>
+                <span>Richmond International Airport, VA Overhead Signage Data Collector</span>
             </div>
             <div id="viewer-content">
                 <div id="loading">Loading Mapillary viewer...</div>
@@ -353,10 +353,10 @@
 
     <script>
         const TOKEN = 'MLY|24840280672250420|6fc0e204403850a11ccc043866f1b01d';
-        const START_ID = '1575366663603802';
+        const START_ID = '1408658753959170';
         const USERNAME = 'TimmonsPavement';
-        const START_DATE = '2026-07-29T00:00:00Z';
-        const END_DATE = '2026-08-01T00:00:00Z';
+        const START_DATE = '2026-09-01T00:00:00Z';
+        const END_DATE = '2026-09-03T00:00:00Z';
         
         // ArcGIS API Key for basemap access
         const ARCGIS_API_KEY = 'AAPTxy8BH1VEsoebNVZXo8HurAW-Ke5e6HB8U2esToHfha9ZsFhRdXoDR7OMWXBdrd2QlBM57lZw4SR_wOoFXgofIad5gAAeGxqIcxhukvsn2slAY8B0UsMJye5abboMDFo1aqcU67Qa1V8hdLe4_dJJhEtud0UsmOVkaGdB3-imyMLgxQmuOoS1ewZL0BxFcHLWCgwPXjALSRPx61V3fKC9WOi0Cf5eKcLUfCJ-lBaLSCtdDMOMeao2oT1c11qZYERlGKaSrRXfDQJwfVMY3mBjQw..AT1_1eUixb5T';
@@ -847,7 +847,7 @@
         viewer.on('pov', updateMiniMapPosition);
 
         document.getElementById('mapillary-link-btn').addEventListener('click', () => {
-            window.open('https://www.mapillary.com/app/user/TimmonsPavement?lat=37.28772200544526&lng=-77.29466375106836&z=12.756722841738197&username%5B%5D=TimmonsPavement&x=0.42337545829369383&y=0.4980904753330924&zoom=0&focus=map&dateFrom=2025-11-24&dateTo=2025-12-17', '_blank');
+            window.open('https://www.mapillary.com/app/?lat=37.508781133195896&lng=-77.32864272961302&z=13.908135029806314&username%5B%5D=TimmonsPavement&x=0.5021873873396251&y=0.5147174022667631&zoom=0&dateFrom=2026-09-01&dateTo=2026-09-03&focus=map&pKey=1408658753959170', '_blank');
         });
 
         document.getElementById('reload-minimap-btn').addEventListener('click', () => {
@@ -879,7 +879,7 @@
                 
                 const iframe = document.getElementById('arcgis-map');
                 const baseUrl = 'https://timmons-group.maps.arcgis.com/apps/mapviewer/index.html';
-                const newUrl = `${baseUrl}?webmap=7bfdb0246f6548daa64228547ebe7dd0&center=${pos.lng},${pos.lat}&level=${arcgisZoom}`;
+                const newUrl = `${baseUrl}?webmap=0b0c71c79a3e4b0a93ace23cec193798&center=${pos.lng},${pos.lat}&level=${arcgisZoom}`;
                 iframe.src = newUrl;
                 
                 const btn = document.getElementById('sync-btn');
@@ -902,7 +902,7 @@
                 const arcgisZoom = 20;
                 
                 const baseUrl = 'https://timmons-group.maps.arcgis.com/apps/webeditor/index.html';
-                const editorUrl = `${baseUrl}?webmap=7bfdb0246f6548daa64228547ebe7dd0&center=${pos.lng},${pos.lat}&level=${arcgisZoom}`;
+                const editorUrl = `${baseUrl}?webmap=0b0c71c79a3e4b0a93ace23cec193798&center=${pos.lng},${pos.lat}&level=${arcgisZoom}`;
                 window.open(editorUrl, '_blank');
             } catch (err) {
                 console.error('Error opening web editor:', err);
